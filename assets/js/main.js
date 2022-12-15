@@ -4,7 +4,7 @@ data: {
 
    arrayDischi : [],
    arrayPerGenere : [],
-   genereSelezionato : ''
+   genereSelezionato : 'all',
 
 },
 
