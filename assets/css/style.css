@@ -1,0 +1,29 @@
+body{
+   background-color: #1E2D3B;
+}
+
+#app{
+   width: 60%;
+   margin: 0 auto;
+}
+
+.album{
+   width: 100%;
+   text-align: center;
+   padding: 15px;
+}
+
+.card-container{
+   width: calc(90%/3);
+   background-color: #2D3A46;
+   margin-top: 30px;
+}
+
+img{
+   width: 100%;
+   margin-bottom: 20px;
+}
+
+.subtitle-color{
+   color: #6C6B6D;
+}
