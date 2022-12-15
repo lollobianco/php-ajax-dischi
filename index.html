@@ -15,10 +15,21 @@
 
 <body>
 
-   <div id="app">
+   <div id="app" class="text-center">
 
+      <!-- SELECT -->
 
-      <div class="d-flex flex-wrap justify-content-between">
+      <select @change="cambiaGenere" v-model="genereSelezionato" name="genere" id="genere" class="m-4 select px-2 py-1 rounded">
+
+         <option selected value="all">All</option>
+
+         <option v-for="(elem, index) in arrayPerGenere" :value="elem">{{elem}}</option>
+
+      </select>
+
+      <!-- CARD CICLATE -->
+
+      <div class="d-flex flex-wrap ">
 
          <div class="card-container" v-for="(elem, index) in arrayDischi">
             <div class="album">

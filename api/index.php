@@ -4,10 +4,21 @@
 
   $arrayDischi = [];
 
-  foreach( $database as $elem ){
+  if( !empty($_GET) && !empty($_GET['genre'] ) ){
 
-    $arrayDischi[] = $elem;
+    foreach( $database as $elem ){
+      // var_dump( $_GET['tipo'] );
+      if( $elem['genre'] == $_GET['genre'] ){
+        //se il tipo del prodotto corrisponde al tipo scritto nel parametro url "tipo" pusho l'elemento dell'array filtrato
+        $arrayDischi[] = $elem;
+      }
 
+    }
+
+  } else {
+    
+    $arrayDischi = $database; 
+    
   }
 
   header('Content-type: application/json');

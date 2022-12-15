@@ -10,20 +10,30 @@ body{
 .album{
    width: 100%;
    text-align: center;
-   padding: 15px;
+   padding: 20px;
 }
 
 .card-container{
    width: calc(90%/3);
    background-color: #2D3A46;
    margin-top: 30px;
+   border-radius: 5px;
+   margin: 10px;
 }
 
 img{
    width: 100%;
    margin-bottom: 20px;
+   border-radius: 5px;
+   width: 85%;
 }
 
 .subtitle-color{
    color: #6C6B6D;
+}
+
+.select{
+   background-color: #2D3A46;
+   border: none;
+   color: white;
 }

@@ -3,6 +3,8 @@ el: '#app',
 data: {
 
    arrayDischi : [],
+   arrayPerGenere : [],
+   genereSelezionato : ''
 
 },
 
@@ -16,6 +18,17 @@ mounted() {
 
          console.log(this.arrayDischi)
 
+         this.arrayDischi.forEach((elem) => {
+
+            console.log(elem)
+  
+            //condizione
+            if (!this.arrayPerGenere.includes(elem.genre)) {
+              this.arrayPerGenere.push(elem.genre);
+            }
+  
+         })
+
       })
 
 },
@@ -26,6 +39,25 @@ beforeUpdate() {
 
 },
 methods: {
+
+   cambiaGenere() {
+
+      if(this.genereSelezionato != 'all'){
+      axios.get(`./api/index.php?genre=${this.genereSelezionato}`)
+      .then((res) => {
+        this.arrayDischi = res.data
+      })
+
+      } else{
+
+         axios.get(`./api/index.php`)
+         .then((res) => {
+           this.arrayDischi = res.data
+
+         }) 
+
+      }
+    }
 
 }
 })
